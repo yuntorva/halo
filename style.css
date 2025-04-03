@@ -1,0 +1,94 @@
+@font-face {   font-family: 'dance';   src: url(PlayfairDisplay-Italic.ttf) format('truetype');}
+@font-face {
+    font-family: 'mew'; src: url(PlayfairDisplay-BoldItalic.ttf) format(truetype);
+    src: url();
+}
+body
+{
+    margin:0;
+    padding:0;
+    background-color: skyblue;
+}
+img {
+    
+    width: 100%;
+    top: 56%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+p
+{
+    top: 49%;
+    left: 50%;
+    width: 75%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    color: gold;
+    font-family: 'dance';
+    font-size: 15px;
+    line-height: 2em;
+}
+.container
+{
+    width: 300px;
+    height: 500px;
+    background: #a00037;
+    left:50%;
+    top:40%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+}
+.container img, p
+{
+    position: absolute;
+}
+.cover
+{
+    height: 117%;
+    width: 300px;
+    background: #ececec;
+    position: relative;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all .8s ease-in;
+}
+.container:hover .cover
+{
+    transform: rotateY(-180deg);
+}
+figure
+{
+   display: block;
+   position: absolute;
+   width: 150%;
+   height: 100%;
+   margin: 0;
+   backface-visibility: hidden;
+}
+
+figure.front-face
+{
+    background: linear-gradient(#c75b5b,#e99f9f);
+}
+figure.back-face
+{
+    background: #c75b5b;
+    transform: rotateY(-180deg);
+    
+}
+figure.front-face p{
+    font-size: 20px;
+    top: 40%;
+    font-family: 'dance';
+    color: goldenrod
+}
+figure.front-face img
+{
+    width: 100px;
+    top: 25%;
+
+}
